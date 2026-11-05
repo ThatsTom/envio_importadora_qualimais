@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174b43">
+  <meta name="description" content="Consulte o código da sua encomenda e veja a previsão e o endereço de entrega.">
+  <title>Minha entrega — Consulte sua encomenda</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23174b43'/%3E%3Cpath d='m10 15 10-5 10 5v12l-10 5-10-5Zm0 0 10 5 10-5M20 20v12' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="Minha entrega, início"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m6 10 10-5 10 5v13l-10 5-10-5Zm0 0 10 5 10-5M16 15v13M11 7.5l10 5v5"/></svg></span>minha<span class="brand-light">entrega</span><span class="brand-dot">.</span></a>
+    <span class="header-note"><span class="tiny-dot"></span> Um caminho até você</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> CONSULTA DE ENCOMENDA</p>
+        <h1 id="page-title">Sua entrega,<br>cada vez mais <span class="title-accent">perto<svg viewBox="0 0 210 15" aria-hidden="true"><path d="M4 10Q90 0 205 6"/></svg>.</span></h1>
+        <p class="intro">A expectativa é grande. A consulta é simples.<br>Veja quando sua encomenda chega até você.</p>
+        <form id="tracking-form" class="tracking-form" novalidate>
+          <label for="tracking-code">Qual é o código da sua encomenda?</label>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5v14M8 5v14M11 5v14M16 5v14M20 5v14"/></svg>
+            <input id="tracking-code" name="tracking-code" type="text" placeholder="Digite seu código de rastreio" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="60" aria-describedby="input-help input-error" required>
+            <button type="submit">Consultar <span aria-hidden="true">↗</span></button>
+          </div>
+          <p id="input-help" class="input-help">Use o código recebido para consultar sua entrega.</p>
+          <p id="input-error" class="input-error" role="alert" hidden></p>
+        </form>
+      </div>
+
+      <div class="journey" id="journey">
+        <div class="scene-top"><span class="scene-label">CADA ENTREGA, UMA HISTÓRIA</span><span class="scene-number">01 — 03</span></div>
+        <div class="scene" role="img" aria-label="Ilustração de um caminhão de entregas aguardando a saída" id="truck-scene">
+          <svg class="landscape" viewBox="0 0 560 330" aria-hidden="true">
+            <circle cx="406" cy="93" r="42" fill="#efbf6a"/>
+            <g class="clouds" fill="#fff" opacity=".72"><path d="M80 85a16 16 0 0 1 28-11 22 22 0 0 1 41 11Z"/><path d="M332 54a11 11 0 0 1 21-6 15 15 0 0 1 28 6Z"/></g>
+            <path d="M42 250Q94 175 163 216T306 218T522 232V284H42Z" fill="#cbd8be"/>
+            <g fill="#d7dfd0"><rect x="82" y="137" width="65" height="111" rx="3"/><rect x="153" y="164" width="54" height="85" rx="3"/><path d="M384 171h40v80h-40zM434 140h55v111h-55z"/></g>
+            <g fill="#bacbb9"><path d="M95 152h10v14H95zM121 152h10v14h-10zM95 181h10v14H95zM121 181h10v14h-10zM95 210h10v14H95zM121 210h10v14h-10zM164 180h10v12h-10zM186 180h10v12h-10zM447 155h11v15h-11zM470 155h10v15h-10zM447 184h11v15h-11zM470 184h10v15h-10z"/></g>
+            <g><path d="M61 202v54M504 196v60" stroke="#52725b" stroke-width="5"/><ellipse cx="61" cy="192" rx="22" ry="34" fill="#8aaa83"/><ellipse cx="504" cy="186" rx="21" ry="34" fill="#8aaa83"/></g>
+            <path d="M35 258H525" stroke="#a7bca0" stroke-width="2"/>
+            <rect x="25" y="268" width="510" height="40" rx="20" fill="#fff" opacity=".48"/>
+            <g class="road-lines" stroke="#b9c8b3" stroke-width="3" stroke-linecap="round"><path d="M-40 288H-10M20 288H50M80 288H110M140 288H170M200 288H230M260 288H290M320 288H350M380 288H410M440 288H470M500 288H530M560 288H590"/></g>
+            <ellipse cx="288" cy="267" rx="124" ry="9" fill="#345b44" opacity=".12"/>
+            <g class="truck-body">
+              <path d="M171 154h151a9 9 0 0 1 9 9v87H163v-88a8 8 0 0 1 8-8" fill="#194f45"/>
+              <path d="M331 183h44a14 14 0 0 1 11 6l28 41v20h-83Z" fill="#f1b85a"/>
+              <path d="M345 192h26a7 7 0 0 1 6 3l18 28h-50Z" fill="#d7e8de"/>
+              <path d="M349 195h19l17 24h-36Z" fill="#b0cec2"/>
+              <path d="M332 226h82M338 232h11" stroke="#c68a36" stroke-width="3"/>
+              <rect x="154" y="247" width="266" height="12" rx="4" fill="#153b35"/>
+              <rect x="404" y="233" width="10" height="7" rx="2" fill="#fff4c6"/>
+              <rect x="163" y="231" width="5" height="10" rx="1" fill="#efb26f"/>
+              <g stroke="#e9f0dd" stroke-width="2" fill="none"><path d="m224 189 20-10 20 10v25l-20 10-20-10Zm0 0 20 10 20-10M244 199v25M234 184l20 10v8"/></g>
+              <path d="M180 171h52" stroke="#548073" stroke-width="3" stroke-linecap="round"/>
+              <g class="wheel wheel-back"><circle cx="204" cy="255" r="21" fill="#203d37"/><circle cx="204" cy="255" r="11" fill="#dae0d4"/><path d="M204 247v16M196 255h16" stroke="#91a398" stroke-width="3"/><circle cx="204" cy="255" r="3" fill="#203d37"/></g>
+              <g class="wheel wheel-front"><circle cx="376" cy="255" r="21" fill="#203d37"/><circle cx="376" cy="255" r="11" fill="#dae0d4"/><path d="M376 247v16M368 255h16" stroke="#91a398" stroke-width="3"/><circle cx="376" cy="255" r="3" fill="#203d37"/></g>
+            </g>
+            <g class="speed-lines" stroke="#688a71" stroke-width="3" stroke-linecap="round"><path d="M121 201h24M110 217h35M125 233h20"/></g>
+          </svg>
+          <div class="floating-tag"><span class="tag-icon" aria-hidden="true">↗</span><span id="scene-tag">O próximo destino é você</span></div>
+        </div>
+        <div class="scene-caption"><span class="caption-icon" aria-hidden="true">⌁</span><div><strong id="scene-title">Todo caminho leva a uma chegada.</strong><p id="scene-description">Consulte seu código e veja a previsão de entrega.</p></div></div>
+      </div>
+    </section>
+
+    <section id="tracking-result" class="result" aria-labelledby="result-heading" hidden>
+      <div class="result-header"><div><p class="eyebrow">ENCOMENDA LOCALIZADA</p><h2 id="result-heading" tabindex="-1">Os próximos passos da sua entrega.</h2></div><span id="status-badge" class="status-badge"><span></span><span id="status-text">Entrega agendada</span></span></div>
+      <div class="delivery-grid">
+        <article class="date-card"><span class="detail-label">PREVISÃO DE ENTREGA</span><div class="delivery-date"><span>09</span><div>novembro<strong>2026</strong></div></div><div class="date-bottom"><span class="calendar-icon" aria-hidden="true">▦</span><div>Segunda-feira<strong>Em horário comercial</strong></div></div></article>
+        <article class="address-card"><span class="detail-label">DESTINO DA ENCOMENDA</span><div class="address-content"><span class="pin-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><address><strong>Avenida Antônio Vieira do Nascimento, 131</strong><span>Jardim Nathalie · Mogi das Cruzes – SP</span><span>CEP 08725-740 · Brasil</span></address></div><div class="code-line"><span>Código de rastreio</span><strong>BRAA131VNJN087MCSP</strong></div></article>
+      </div>
+      <ol class="timeline" aria-label="Etapas da entrega"><li class="complete"><span class="step-dot" aria-hidden="true">✓</span><div><strong>Entrega agendada</strong><span>Previsão definida</span></div></li><li id="route-step"><span class="step-dot" aria-hidden="true">2</span><div><strong>A caminho</strong><span id="route-description">A partir de 09/11</span></div></li><li><span class="step-dot" aria-hidden="true">3</span><div><strong>Entrega no endereço</strong><span>Aguardando confirmação</span></div></li></ol>
+      <p class="delivery-message" id="delivery-message">Sua entrega está prevista para <strong>09/11/2026, em horário comercial</strong>, no endereço acima.</p>
+      <p class="schedule-note">Status programado pela data, no horário de Brasília. Esta consulta não recebe atualizações em tempo real da transportadora.</p>
+    </section>
+
+    <div class="page-note"><span class="note-package" aria-hidden="true">◇</span><p>Menos dúvidas.<br><strong>Mais perto da sua encomenda.</strong></p><span class="note-line"></span><span class="note-small">SIMPLES. DIRETO. ATÉ VOCÊ.</span></div>
+  </main>
+  <footer class="footer wrap"><span>minhaentrega<span class="brand-dot">.</span></span><p>Consulta de previsão de entrega</p><span>Feito para encurtar a espera <span aria-hidden="true">↗</span></span></footer>
+  <noscript><p class="noscript">Ative o JavaScript no navegador para consultar sua encomenda.</p></noscript>
+</body>
+</html>
